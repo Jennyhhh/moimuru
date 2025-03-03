@@ -1,48 +1,67 @@
-.rouge-script-regular {
-    font-family: "Rouge Script", serif;
-    font-weight: 400;
-    font-style: normal;
+/* Fonttien määrittelyt */
+@font-face {
+    font-family: "Rouge Script";
+    font-display: swap;
+    src: url(https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap);
 }
 
-.just-me-again-down-here-regular {
-    font-family: "Just Me Again Down Here", serif;
-    font-weight: 400;
-    font-style: normal;
+@font-face {
+    font-family: "Just Me Again Down Here";
+    font-display: swap;
+    src: url(https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap);
+}
+
+/* CSS Reset ja perusmäärittely */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
   
 body, html {
     background-color: #fffafa;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    overflow-x: hidden;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.page-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    width: 100%;
+    position: relative;
 }
 
+/* Header-alue */
 header {
     width: 100%;
-    height: auto;
-    padding: 15px 0;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     background-color: #fffafa;
 }
 
 .header-content {
-    width: 100%;
+    width: 90%;
+    max-width: 600px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px 0;
 }
 
 .header-line {
     width: 100%;
     border: none;
-    height: 3px;
+    height: 2px;
     background-color: #2c4867;
     position: absolute;
 }
@@ -53,119 +72,212 @@ header {
     border-radius: 50%;
     position: relative;
     z-index: 2;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .image-container img {
-    width: 100px;
-    height: 90px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.ekateksti{
-    color: #fffafa;
-    background-color: #98c0e1;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 400px;
-    padding: 15px;
-    font-family: "Just Me Again Down Here", cursive;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.container {
+/* Main-alue */
+main {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    position: relative;
     width: 100%;
-    margin-bottom: 70px; /* Tilaa footerille */
+    padding-bottom: 70px; /* Tilaa footerille */
+}
+
+.ekateksti {
+    color: #fffafa;
+    background-color: #98c0e1;
+    margin: 20px auto;
+    width: 85%;
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.ekateksti h1 {
+    font-family: "Just Me Again Down Here", cursive, sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ekateksti p {
+    font-family: "Just Me Again Down Here", cursive, sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .envelope {
-    width: 120px;
+    width: 90px;
+    height: auto;
     cursor: pointer;
     transition: transform 0.3s;
 }
 
-.envelope:hover {
+.envelope:hover, .envelope:active, .envelope.touch-active {
     transform: scale(1.1);
 }
 
+/* Kirje */
 .letter {
     display: none;
-    flex-direction: column;
-    text-align: center;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 280px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.letter-content {
+    width: 85%;
+    max-width: 300px;
     background: #fcc7ea;
     color: #2c4867;
     padding: 20px;
     border: 2px solid #fcace1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.letter-content p {
+    font-family: "Just Me Again Down Here", cursive, sans-serif;
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
 button {
-    margin-top: 10px;
-    padding: 8px 15px;
+    padding: 10px 18px;
     cursor: pointer;
     background-color: #2c4867;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    font-family: Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
+button:active {
+    background-color: #1d3450;
+}
+
+/* Footer */
 footer {
     width: 100%;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 15px 0;
+    background-color: #2c4867;
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #2c4867;
-    color: #fffafa;
-    font-family: "Rouge Script", cursive;
-    font-size: 18px;
+    text-align: center;
+    z-index: 10;
 }
 
-/* Media queries mobiilille */
-@media screen and (max-width: 480px) {
-    .image-container img {
-        width: 80px;
-        height: 75px;
+footer p {
+    color: #fffafa;
+    font-family: "Rouge Script", cursive, sans-serif;
+    font-size: 20px;
+}
+
+/* Cross-platform korjauksia */
+input, textarea, button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+/* Android ja iOS-korjauksia */
+@media screen and (max-width: 430px) {
+    .image-container {
+        width: 70px;
+        height: 70px;
     }
     
     .ekateksti h1 {
-        font-size: 24px;
-        margin: 10px 0;
+        font-size: 26px;
     }
     
     .ekateksti p {
-        font-size: 18px;
-        margin: 5px 0;
+        font-size: 20px;
     }
     
     .envelope {
-        width: 100px;
+        width: 80px;
     }
     
-    footer {
-        font-size: 16px;
+    .letter-content {
+        width: 80%;
+        padding: 15px;
     }
+    
+    .letter-content p {
+        font-size: 20px;
+    }
+    
+    footer p {
+        font-size: 18px;
+    }
+}
+
+/* Android-kohtaisia korjauksia */
+@supports (-webkit-overflow-scrolling: touch) {
+    /* iOS-ympäristössä */
+}
+
+@supports not (-webkit-overflow-scrolling: touch) {
+    /* Android ympäristössä */
+    button {
+        min-height: 48px; /* Android-kosketusystävällisyys */
+    }
+    
+    .envelope {
+        min-width: 48px;
+        min-height: 48px;
+    }
+}
+
+/* High-DPI näyttöjen korjaukset */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Korkeamman resoluution näytöille */
+}
+
+/* Fallback fontit jos erikoiset eivät lataudu */
+.fonts-not-loaded .ekateksti h1,
+.fonts-not-loaded .ekateksti p,
+.fonts-not-loaded .letter-content p {
+    font-family: Arial, sans-serif;
+}
+
+.fonts-not-loaded footer p {
+    font-family: Georgia, serif;
 }
 

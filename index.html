@@ -2,9 +2,9 @@
 <html lang="fi">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <title>Moi muru</title>
-        <link rel="stylesheet" href="/tyylittely.css">
+        <link rel="stylesheet" href="tyylittely.css">
         <!--Linkit fonteille-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,37 +21,43 @@
                     window.location.href = "https://google.com"; // Ohjaa pois, jos väärä
                 }
             }
-            checkPassword();
+            window.onload = checkPassword;
         </script>
 
-        <header>
-            <div class="header-content">
-                <hr class="header-line">
+        <div class="page-container">
+            <header>
+                <div class="header-content">
+                    <hr class="header-line">
                     <div class="image-container">
                         <img src="kuvat/header.kuva.jpg" alt="Ympyräkuva">
                     </div>
-            </div>
-        </header>
+                </div>
+            </header>
 
-        <div class="ekateksti">
-            <h1>Moikka rakas!</h1>
-            <p>Hei sulle on tullu postia!! Avaa tosta alhaalta</p>
+            <main>
+                <div class="ekateksti">
+                    <h1>Moikka rakas!</h1>
+                    <p>Hei sulle on tullu postia!! Avaa tosta alhaalta</p>
+                </div>
+                
+                <div class="container">
+                    <!-- Kirjekuoren kuva -->
+                    <img src="kuvat/envelope.png" alt="Kirjekuori" class="envelope" id="envelope">
+                </div>
+            </main>
+
+            <footer>
+                <p>Oot kaikista rakkain</p>
+            </footer>
         </div>
-        
-        <div class="container">
-            <!-- Kirjekuoren kuva -->
-            <img src="kuvat/envelope.png" alt="Kirjekuori" class="envelope" id="envelope">
-    
-            <!-- Kirje (aluksi piilotettu) -->
-            <div class="letter" id="letter">
+
+        <!-- Kirje (aluksi piilotettu) -->
+        <div class="letter" id="letter">
+            <div class="letter-content">
                 <p>Hei! Tämä on kirjeesi. 😊</p>
                 <button id="closeLetter">Sulje</button>
             </div>
         </div>
-
-        <footer>
-            <p>Oot kaikista rakkain</p>
-        </footer>
 
         <script src="script.js"></script>
 
