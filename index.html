@@ -6,6 +6,18 @@
     </head>
 
     <body>
+        
+        <script>
+            function checkPassword() {
+                var password = prompt("Syötä salasana:");
+                if (password !== "salasana123") {
+                    alert("Väärä salasana!");
+                    window.location.href = "https://google.com"; // Ohjaa pois, jos väärä
+                }
+            }
+            checkPassword();
+        </script>
+
         <h1>Moikka!</h1>
         <p>Tervetuloa</p>
     </body>
