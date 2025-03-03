@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Moi muru</title>
-        <link rel="stylesheet" href="tyylittely.css">
+        <link rel="stylesheet" href="/tyylittely.css">
+        <!--Linkit fonteille-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Rouge+Script&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -19,7 +23,36 @@
             checkPassword();
         </script>
 
-        <h1>Moikka!</h1>
-        <p>Tervetuloa</p>
+        <header>
+            <div class="header-content">
+                <hr class="header-line">
+                    <div class="image-container">
+                        <img src="kuvat/header.kuva.jpg" alt="Ympyräkuva">
+                    </div>
+            </div>
+        </header>
+
+        <div class="ekateksti">
+            <h1>Moikka rakas!</h1>
+            <p>Hei sulle on tullu postia!! Avaa tosta alhaalta</p>
+        </div>
+        
+        <div class="container">
+            <!-- Kirjekuoren kuva -->
+            <img src="kuvat/envelope.png" alt="Kirjekuori" class="envelope" id="envelope">
+    
+            <!-- Kirje (aluksi piilotettu) -->
+            <div class="letter" id="letter">
+                <p>Hei! Tämä on kirjeesi. 😊</p>
+                <button id="closeLetter">Sulje</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Oot kaikista rakkain</p>
+        </footer>
+
+        <script src="script.js"></script>
+
     </body>
 </html>
