@@ -5,11 +5,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Klikkaa kirjekuorta -> Näytä kirje
     envelope.addEventListener("click", function () {
-        letter.style.display = "block";
+        letter.style.display = "flex";
     });
 
     // Klikkaa sulkupainiketta -> Piilota kirje
     closeLetter.addEventListener("click", function () {
         letter.style.display = "none";
+    });
+    
+    // Sulje kirje myös kun klikataan selaimen takaisinpainiketta
+    window.addEventListener("popstate", function() {
+        letter.style.display = "none";
+    });
+    
+    // Kun kirje avataan, lisää historia-entry
+    envelope.addEventListener("click", function() {
+        history.pushState({letterOpen: true}, "");
     });
 });
