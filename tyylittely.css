@@ -1,5 +1,4 @@
 body {
-    width: 300px;
     background-color: lightpink;
     display: flex;
     flex-direction: column;
