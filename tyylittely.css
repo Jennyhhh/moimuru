@@ -108,7 +108,7 @@ header {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 .image-container img {
@@ -282,6 +282,7 @@ input, textarea, button {
     footer p {
         font-size: 18px;
     }
+
 }
 
 /* Android-kohtaisia korjauksia */
