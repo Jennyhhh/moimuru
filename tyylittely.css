@@ -243,6 +243,35 @@ footer p {
     font-size: 20px;
 }
 
+/* Galleria-sivun muotoilu */
+
+.galleriateksti{
+    color: #fffafa;
+    background-color: #98c0e1;
+    margin: 20px auto;
+    width: 85%;
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: "Just Me Again Down Here", cursive, sans-serif;
+    font-size: 22px;
+}
+
+.galleria{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.galleria img{
+    width: calc(33.333% - 5px);
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
 /* Cross-platform korjauksia */
 input, textarea, button {
     -webkit-appearance: none;
@@ -281,6 +310,10 @@ input, textarea, button {
     
     footer p {
         font-size: 18px;
+    }
+
+    .galleria img {
+        width: 100%;
     }
 
 }
