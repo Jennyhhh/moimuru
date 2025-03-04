@@ -103,4 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
             button.style.minHeight = '48px';
         });
     }
+
+    
 });
