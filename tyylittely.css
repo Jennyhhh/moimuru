@@ -36,6 +36,8 @@ body, html {
     min-height: 100vh;
     width: 100%;
     position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Header-alue */
@@ -56,36 +58,6 @@ header {
     align-items: center;
     justify-content: center;
     padding: 10px 0;
-}
-
-.nav-bar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-}
-
-.nav-bar ul {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    gap: 20px;
-    margin-top: -20px;
-}
-
-.nav-bar ul li {
-    display: inline;
-}
-
-.nav-bar ul a {
-    font-family: "Just Me Again Down Here", cursive, sans-serif;
-    text-decoration: none;
-    color: #2c4867;
-    font-weight: bold;
-    padding: 10px 15px;
 }
 
 .header-line {
@@ -118,6 +90,46 @@ header {
     object-fit: cover;
 }
 
+.valikonkuva img{
+    display:block;
+    width: 50px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+/*Valikko */
+
+#valikkomenu {
+    display: none;
+    background-color: #98c0e1;  
+    width: 85%;
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    z-index: 1;
+}
+
+#valikkomenu.active {
+    display: block;
+}
+
+#valikkomenu ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 20px;
+}
+
+#valikkomenu li a {
+    color: #fffafa;
+    font-family: "Just Me Again Down Here", cursive, sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
 /* Main-alue */
 main {
     flex: 1;
@@ -125,7 +137,6 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding-bottom: 70px; /* Tilaa footerille */
 }
 
 .ekateksti {
@@ -136,13 +147,6 @@ main {
     max-width: 350px;
     padding: 15px;
     border-radius: 12px;
-    text-align: center;
-}
-
-.ekateksti h1 {
-    font-family: "Just Me Again Down Here", cursive, sans-serif;
-    font-size: 28px;
-    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -176,6 +180,26 @@ main {
     height: auto;
 }
 
+.Spotify-kappale{
+    max-width: 80%;
+    max-height: auto;
+    margin-bottom: 70px;
+}
+
+.Spotify-kappale h1{
+    font-family: "Just Me Again Down Here", cursive, sans-serif;
+    color: #fffafa;
+    background-color: #98c0e1;
+    margin: 20px auto;
+    width: 85%;
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
 /* Kirje */
 .letter {
     display: none;
@@ -192,6 +216,7 @@ main {
 }
 
 .letter-content {
+    font-family: "Just Me Again Down Here", cursive, sans-serif;
     width: 85%;
     max-width: 300px;
     background: #fcc7ea;
@@ -204,9 +229,15 @@ main {
 }
 
 .letter-content p {
+    color: #fffafa;
+    background-color: #98c0e1;
+    margin: 20px auto;
+    width: 85%;
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
     font-family: "Just Me Again Down Here", cursive, sans-serif;
-    font-size: 22px;
-    margin-bottom: 15px;
 }
 
 button {
