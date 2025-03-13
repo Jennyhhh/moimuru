@@ -36,10 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function openLetter() {
         letter.style.display = "flex";
-        // Estä scrollaus kun modal on auki
-        document.body.style.overflow = 'hidden';
-        document.body.style.position = 'fixed';
-        document.body.style.width = '100%';
+        
+        if (letter.scrollHeight > window.innerHeight) {
+            document.body.style.overflow = 'auto';
+            document.body.style.position = 'relative';
+        } else {
+            document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+        }
     }
 
     // Klikkaa sulkupainiketta -> Piilota kirje
