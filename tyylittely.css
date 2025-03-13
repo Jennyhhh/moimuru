@@ -141,7 +141,7 @@ main {
 
 .ekateksti {
     color: #fffafa;
-    background-color: #98c0e1;
+    background-color: #fcc7ea;
     margin: 20px auto;
     width: 85%;
     max-width: 350px;
@@ -189,7 +189,7 @@ main {
 .Spotify-kappale h1{
     font-family: "Just Me Again Down Here", cursive, sans-serif;
     color: #fffafa;
-    background-color: #98c0e1;
+    background-color: #fcc7ea;
     margin: 20px auto;
     width: 85%;
     max-width: 350px;
@@ -305,6 +305,23 @@ footer p {
 
 /* Hehehee-sivun muotoilu */
 
+.Kehusimulaattori{
+    color: #fffafa;
+    background-color: #98c0e1;
+    margin: 20px auto;
+    width: 85%;
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.Kehusimulaattori img{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 12px;
+}
 
 /* Cross-platform korjauksia */
 input, textarea, button {

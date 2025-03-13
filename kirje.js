@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const envelope = document.getElementById("envelope");
     const letter = document.getElementById("letter");
     const closeLetter = document.getElementById("closeLetter");
-    const menu = document.getElementById("valikkomenu");
-    const menuIcon = document.querySelector(".valikonkuva img");
     
     // Aluksi oletamme, että fontit eivät ole vielä latautuneet
     document.body.classList.add('fonts-not-loaded');
@@ -21,16 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.classList.remove('fonts-not-loaded');
             document.body.classList.add('fonts-loaded');
         }, 1000); // Odota sekunnin verran
-    }
-    //Klikkaa valikon kuvaketta -> Näytä valikko
-
-    function toggleMenu() {
-        menu.classList.toggle("active");
-    }
-
-    if (menuIcon) {
-        menuIcon.addEventListener("click", toggleMenu);
-    }    
+    }   
 
     // Klikkaa kirjekuorta -> Näytä kirje
     envelope.addEventListener("click", function (e) {
